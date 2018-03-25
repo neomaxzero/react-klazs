@@ -1,0 +1,33 @@
+.textPrimary {
+  font-weight: 400;
+  color: #f75d89;
+  font-size: 2em;
+  padding: 0 2em;
+}
+
+.textImportant {
+  font-style: italic;
+  text-align: end;
+  color: #ff5c16;
+}
+
+.libName {
+  margin: 0 auto;
+  text-align: center;
+  color: #ed1452;
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  height: 100vh;
+  padding: 0;
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(210, 255, 82, 1) 0%,
+    rgba(86, 229, 171, 1) 100%
+  );
+}
