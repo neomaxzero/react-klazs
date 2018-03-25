@@ -11,6 +11,10 @@
   color: #ff5c16;
 }
 
+.smallText {
+  font-size: 1em;
+}
+
 .libName {
   margin: 0 auto;
   text-align: center;
