@@ -1,21 +1,50 @@
+import { defaults, omit, isObject } from 'lodash';
+
 const defaultOptions = {
-  propToOverride: "overrideClasses"
+  propToOverride: 'overrideClasses'
 };
 
-const overrider = (options = defaultOptions) => (styles, props) => {
+const defaultProps = {
+  innerClasses: true
+};
+
+const overrider = (options = defaultOptions) => (innerStyles, props) => {
   const { propToOverride } = options;
-  const externalClassnames = props[propToOverride];
-  if (!externalClassnames) {
-    console.info("No classes to override");
-    return styles;
+  
+  if (!props[propToOverride]) {
+    return innerStyles;
   }
 
-  const extendedClasses = Object.keys(styles)
+  const externalClassnames = defaults(props[propToOverride], defaultProps);
+
+
+  if (!externalClassnames.innerClasses) {
+    return omit(externalClassnames, 'innerClasses');
+  }
+
+  const extendedClasses = Object.keys(innerStyles)
     .map(sty => {
-      const addClass = !!externalClassnames[sty]
-        ? ` ${externalClassnames[sty]}`
-        : "";
-      return { [sty]: `${styles[sty]}${addClass}` };
+      const currExternalClassnames = externalClassnames[sty];
+
+      let addClass = '';
+      if (!!currExternalClassnames) {
+        if (isObject(currExternalClassnames)) {
+          addClass = ` ${currExternalClassnames.className}`;
+        } else {
+          addClass = ` ${currExternalClassnames}`;
+        }
+      }
+
+      let internalClass = `${innerStyles[sty]}`;
+      if (
+        isObject(currExternalClassnames) &&
+        !currExternalClassnames.innerClasses
+      ) {
+        internalClass = '';
+        addClass = addClass.substring(1);
+      }
+
+      return { [sty]: `${internalClass}${addClass}` };
     })
     .reduce((carrier, sty) => {
       return {
@@ -23,7 +52,6 @@ const overrider = (options = defaultOptions) => (styles, props) => {
         ...sty
       };
     }, {});
-  console.log(extendedClasses);
   return extendedClasses;
 };
 
