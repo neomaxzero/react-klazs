@@ -16,14 +16,20 @@
     "react-scripts": "1.1.0"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.3",
+    "babel-preset-env": "^1.6.1",
     "coveralls": "^3.0.0",
+    "jest": "^22.4.3",
+    "jest-cli": "^22.4.3",
     "rollup": "^0.57.1",
     "rollup-plugin-uglify": "^3.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
+    "eject": "react-scripts eject",
     "build": "rollup -c",
-    "test": "react-scripts test --env=jsdom",
+    "test": "jest --config=./jest.config.js",
     "travis": "react-scripts test --env=jsdom --coverage && cat ./coverage/lcov.info | coveralls"
   }
 }
