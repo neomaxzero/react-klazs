@@ -24,6 +24,6 @@
     "start": "react-scripts start",
     "build": "rollup -c",
     "test": "react-scripts test --env=jsdom",
-    "afterScript": "react-scripts test --env=jsdom --coverage && cat ./coverage/lcov.info | coveralls"
+    "travis": "react-scripts test --env=jsdom --coverage && cat ./coverage/lcov.info | coveralls"
   }
 }
