@@ -1,21 +1,27 @@
 {
   "name": "react-klazs",
   "version": "1.0.0",
-  "description": "",
-  "keywords": [],
-  "homepage": "https://codesandbox.io/s/new",
-  "main": "src/index.js",
+  "author": "neomaxzero",
+  "description": "Override CSS classes with ease",
+  "main": "build/klazs-min.js",
+  "peerDependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
   "dependencies": {
-    "classnames": "2.2.5",
+    "babel": "^6.23.0",
     "lodash": "^4.17.5",
     "react": "16.2.0",
     "react-dom": "16.2.0",
     "react-scripts": "1.1.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "rollup": "^0.57.1",
+    "rollup-plugin-uglify": "^3.0.0"
+  },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "rollup -c",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   }
