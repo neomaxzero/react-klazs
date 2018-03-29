@@ -14,6 +14,14 @@ const App = () => (
     >
       Override your classes with style. (Pun intended)
     </Hello>
+    <Hello
+      overrideClasses={{
+        textPrimary: "smallText",
+        innerClasses: false,
+      }}
+    >
+      Override destructively inner styles to have complete Control.
+    </Hello>
   </div>
 );
 
