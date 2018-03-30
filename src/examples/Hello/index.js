@@ -1,7 +1,9 @@
 import React from "react";
 import { render } from "react-dom";
 import Hello from "./Hello";
-import styles from "./styles.css";
+import "./styles.css";
+import TitleHOC from '../TitleHOC/TItleHOC';
+import TitleRenderProp from '../TitleRenderProp/TitleRenderProp';
 
 const App = () => (
   <div className="root">
@@ -22,6 +24,18 @@ const App = () => (
     >
       Override destructively inner styles to have complete Control.
     </Hello>
+    <TitleHOC
+      overrideClasses={{
+        titleMagic: "notReally",
+      }}
+    > HOC ready </TitleHOC>
+    <TitleRenderProp
+      overrideClasses={{
+        titleMagic: "renderPropMagic",
+      }}
+    >
+      RenderProp ready
+    </TitleRenderProp> 
   </div>
 );
 

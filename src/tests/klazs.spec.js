@@ -1,4 +1,4 @@
-import klazs from '../lib';
+import klazs, { klazsFactory } from '../lib';
 
 describe('React Klazs', () => {
   const currentClasses = {
@@ -93,5 +93,25 @@ describe('React Klazs', () => {
       otroGato: 'anotherCat'
     };
     expect(klazs(currentClasses, myProps)).toEqual(klazsOutput);
+  });
+});
+
+describe('React Klazs Factory', () => {
+  describe('allPropsComponent', () => {
+    it('only use styles and dont dive in object', () => {
+      const klazsCustom = klazsFactory({ allPropsComponent: false });
+      const currentClasses = {
+        textPrimary: 'textPrimary_hashyBoy',
+        otroGato: 'anotherCat'
+      }; 
+      const myProps = {
+        textPrimary: 'myNewPrimaryText',
+      };
+      const klazsOutput = {
+        textPrimary: 'textPrimary_hashyBoy myNewPrimaryText',
+        otroGato: 'anotherCat'
+      };
+      expect(klazsCustom(currentClasses, myProps)).toEqual(klazsOutput);
+    })
   });
 });
