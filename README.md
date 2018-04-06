@@ -1,6 +1,10 @@
 React Klazs
 ============
 [logo]: ./klazs-logo.png "Logo Title Text 2"
+
+[![Build Status](https://travis-ci.org/neomaxzero/react-klazs.svg?branch=master)](https://travis-ci.org/neomaxzero/react-klazs)
+[![Coverage Status](https://coveralls.io/repos/github/neomaxzero/react-klazs/badge.svg?branch=master)](https://coveralls.io/github/neomaxzero/react-klazs?branch=master)
+
 Opinionated utility to override CSS Modules.
 
 ## Demo & Examples
