@@ -1,5 +1,6 @@
 React Klazs
 ============
+[![Build Status](https://travis-ci.org/neomaxzero/react-klazs.svg?branch=master)](https://travis-ci.org/neomaxzero/react-klazs)
 
 Opinionated utility to override CSS Modules.
 
