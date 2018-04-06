@@ -1,4 +1,4 @@
-<h1 align="center" margin-bottom: "10px">
+<h4 align="center" styles="font-weight: 200;">
   React
   <br>
   
