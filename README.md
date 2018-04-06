@@ -1,6 +1,10 @@
-React Klazs
-============
-[logo]: ./klazs-logo.png "Logo Title Text 2"
+<h1 align="center" margin-bottom: "10px">
+  React
+  <br>
+  
+  <img src="https://github.com/neomaxzero/react-klazs/blob/master/Klazs-logo.png?raw=true" alt="React-klazs logo" title="klazs logo" width="280">
+  <br>
+</h1>
 
 [![Build Status](https://travis-ci.org/neomaxzero/react-klazs.svg?branch=master)](https://travis-ci.org/neomaxzero/react-klazs)
 [![Coverage Status](https://coveralls.io/repos/github/neomaxzero/react-klazs/badge.svg?branch=master)](https://coveralls.io/github/neomaxzero/react-klazs?branch=master)
