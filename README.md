@@ -1,6 +1,6 @@
 React Klazs
 ============
-
+[logo]: ./klazs-logo.png "Logo Title Text 2"
 Opinionated utility to override CSS Modules.
 
 ## Demo & Examples
