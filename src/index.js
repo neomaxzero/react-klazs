@@ -1,7 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
-import Hello from "./Hello";
-import styles from "./styles.css";
+import Hello from "./examples/Hello/Hello";
 
 const App = () => (
   <div className="root">

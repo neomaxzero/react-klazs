@@ -1,10 +1,7 @@
 {
   "presets": [
-    "env"
+    "env",
+    "react"
   ],
-  "env": {
-    "test": {
-      "plugins": []
-    }
-  }
+  "plugins": ["transform-object-rest-spread"]
 }

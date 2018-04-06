@@ -1,5 +1,6 @@
 import React from "react";
-import klazs from "./lib";
+import klazs from "../../lib";
+import "./styles.css";
 
 const styles = {
   textPrimary: "textPrimary"
