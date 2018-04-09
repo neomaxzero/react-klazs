@@ -11,7 +11,16 @@
 
 Opinionated utility to override CSS Modules.
 
-## Demo & Examples
+## Motivation
+
+When building truly reusable components, styling is a controversial topic. There are so many ways to do it that if you don't take a decition, a project with different members will reinvent the wheel every single time, or they will just copy the first alternative they found. Defining a constraint is sometimes useful. 
+
+> This is the way it worked for us.
+
+## Examples
+
+Cool examples can be found [here](https://github.com/neomaxzero/react-klazs/tree/master/src/examples)
+
 
 ## Installation
 
